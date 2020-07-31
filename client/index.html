@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test</title>
+  <style>
+    #results {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .movieCard {
+      width: 30%;
+    }
+
+    @media only screen and (max-width: 900px) {
+      #results {
+        flex-direction: column;
+      }
+
+      .movieCard {
+        width: 95%;
+      }
+    }
+  </style>
 </head>
 <body>
   <input id="search" type="text" style="display: none;"/>

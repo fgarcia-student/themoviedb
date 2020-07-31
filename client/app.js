@@ -76,6 +76,7 @@ function displayResults(data) {
   removeAllChildNodes(resultsContainer);
   data.data.results.map((result) => {
     const movieCard = document.createElement("div");
+    movieCard.classList.add("movieCard");
     movieCard.style.border = "1px solid black";
     movieCard.style.padding = "5px";
     movieCard.style.margin = "5px";
@@ -93,12 +94,13 @@ function displayResults(data) {
     voteAverage.innerText = result.vote_average;
 
     const poster = document.createElement("img");
-    let posterUrl = `${client_env.imageUrl}/w500${result.poster_path}`;
+    let posterUrl = `${client_env.imageUrl}/w342${result.poster_path}`;
     if (!result.poster_path) {
       // use default image
       posterUrl = "";
     }
     poster.src = posterUrl;
+    poster.style.width = "100%";
 
     movieCard.append(title, overview, releaseDate, voteAverage, poster);
     resultsContainer.appendChild(movieCard);
