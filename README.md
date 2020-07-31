@@ -5,9 +5,13 @@
 1. Add a .env file in the /api folder with the following values
 
 PORT={port where app will run}
+
 ROOT_URL={root url of the api (https://api.themoviedb.org/3)}
+
 API_KEY={api key}
+
 INCLUDE_ADULT={set to 1 if api should return adult movies}
+
 
 2. Add a client_env.js file in the /client folder with the following content
 ```
